@@ -1,6 +1,6 @@
-# Apple Watch Assistant ⌚️
+# Apple Watch Assistant
 
-A rigorously tested **Retrieval-Augmented Generation (RAG) AI Assistant** featuring a hybrid search pipeline for answering queries related to Apple Watches. This project focuses not just on building a RAG prototype, but on measuring and evaluating its performance in real-world scenarios.
+A **Retrieval-Augmented Generation (RAG) AI Assistant** featuring a hybrid search pipeline for answering queries related to Apple Watches. This project focuses not just on building a RAG prototype, but on measuring and evaluating its performance in real-world scenarios.
 
 ---
 

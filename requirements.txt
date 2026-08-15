@@ -1,0 +1,13 @@
+streamlit>=1.35,<2
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+lxml>=4.9,<6
+groq>=0.9,<2
+torch>=2.2
+transformers>=4.45
+sentence-transformers>=3.0
+chromadb>=0.5
+PyPDF2>=3.0
+
+# Evaluation / testing
+pytest>=8.0

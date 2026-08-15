@@ -49,9 +49,9 @@ This project features a fully isolated `evals/` directory to measure the system'
 ### Dimension 3: Response Quality (LLM-as-a-Judge)
 * **Methodology:** We pass 15 curated "golden test" queries through the full pipeline. The generated response + context is fed back into an LLM (Groq) to grade Groundedness, Faithfulness, and Completeness on a 1-5 scale.
 * **Discussion of Results:**
-  * **✅ Static PDF Queries:** Excellent performance (**5.0/5.0**). The chatbot successfully retrieves context for queries like "What is ECG?" and sticks strictly to the facts.
-  * **✅ Comparisons:** Strong performance (**~4.3/5.0**) when comparing older models (e.g., SE vs Ultra).
-  * **⚠️ Live Web Queries:** Poor performance (**Average 1.89/5.0**). We discovered that when the Apple India web scraper fails to extract a verified price due to DOM layout changes, the LLM ignores its strict prompt and hallucinates realistic-sounding but fake prices (e.g., ₹46,900 for Series 11). 
+  * **Static PDF Queries:** Excellent performance (**5.0/5.0**). The chatbot successfully retrieves context for queries like "What is ECG?" and sticks strictly to the facts.
+  * **Comparisons:** Strong performance (**~4.3/5.0**) when comparing older models (e.g., SE vs Ultra).
+  * **Live Web Queries:** Poor performance (**Average 1.89/5.0**). We discovered that when the Apple India web scraper fails to extract a verified price due to DOM layout changes, the LLM ignores its strict prompt and hallucinates realistic-sounding but fake prices (e.g., ₹46,900 for Series 11). 
   * **Actionable Takeaway:** This evaluation proves the necessity of a stricter prompt ("If context is empty, refuse to guess") and a more resilient scraper regex.
 
 ---
@@ -79,7 +79,11 @@ This project features a fully isolated `evals/` directory to measure the system'
    ```
 
 3. **Set up Environment Variables:**
-   Rename `.env.example` to `.env` and fill in your API keys (like your Groq API Key):
+   You can export your Groq API Key directly in the terminal:
+   ```bash
+   export GROQ_API_KEY="your_api_key_here"
+   ```
+   Alternatively, you can create a `.env` file from the example:
    ```bash
    cp .env.example .env
    ```

@@ -69,7 +69,7 @@ This project features a fully isolated `evals/` directory to measure the system'
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YourUsername/apple-watch-assistant.git
+   git clone https://github.com/SPratik-99/apple-watch-assistant.git
    cd apple-watch-assistant
    ```
 
